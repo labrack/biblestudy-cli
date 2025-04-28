@@ -1,4 +1,5 @@
-# config.py
+# config.py.sample
+# RENAME THIS TO config.py AND UPDATE THE VALUES BELOW
 
 # If environment variables are set, they will override these values.
 
