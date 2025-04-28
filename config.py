@@ -1,0 +1,10 @@
+# config.py
+
+# If environment variables are set, they will override these values.
+
+# API keys
+BIBLE_API_KEY = "your-bible-api-key-here"
+OPENAI_API_KEY = "your-openai-api-key-here"
+
+# Notes directory (where study notes are saved)
+BIBLESTUDY_NOTES_DIRECTORY = "notes"
