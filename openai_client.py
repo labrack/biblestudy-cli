@@ -1,9 +1,9 @@
 # openai_client.py
 
-import openai
+from openai import OpenAI
 from config_loader import get_openai_api_key
 
-openai.api_key = get_openai_api_key()
+client = OpenAI(api_key=get_openai_api_key())
 
 PROMPTS = {
     "simplify": "Simplify the meaning of this Bible verse into basic, clear terms:",
@@ -24,14 +24,14 @@ def ask_openai(action, verse_text):
     print("Generating response...", end=" ")
 
     try:
-        response = openai.ChatCompletion.create(
-            model="gpt-4o",  # You can change to "gpt-3.5-turbo" if you want cheaper/faster
+        response = client.chat.completions.create(
+            model="gpt-4o",  # You could also use "gpt-3.5-turbo" if you want cheaper queries
             messages=[
                 {"role": "system", "content": "You are a helpful Bible study assistant."},
                 {"role": "user", "content": prompt}
             ]
         )
-        content = response['choices'][0]['message']['content'].strip()
+        content = response.choices[0].message.content.strip()
         print("done.")
         return content
     except Exception as e:
