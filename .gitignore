@@ -1,0 +1,18 @@
+# Ignore cache and user data
+cache.json
+notes/
+
+# Avoid publishing sensitive API keys and any local config
+config.py
+
+# Python common ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+.venv/
+.idea/
+.vscode/
+*.log
+.DS_Store

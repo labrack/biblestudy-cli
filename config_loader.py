@@ -1,0 +1,13 @@
+# config_loader.py
+
+import os
+import config
+
+def get_bible_api_key():
+    return os.getenv("BIBLE_API_KEY") or config.BIBLE_API_KEY
+
+def get_openai_api_key():
+    return os.getenv("OPENAI_API_KEY") or config.OPENAI_API_KEY
+
+def get_notes_directory():
+    return os.getenv("BIBLESTUDY_NOTES_DIRECTORY") or config.BIBLESTUDY_NOTES_DIRECTORY
