@@ -1,10 +1,3 @@
-# Suppress LibreSSL warnings from urllib3 on older MacOS
-import warnings
-from urllib3.exceptions import NotOpenSSLWarning
-
-warnings.filterwarnings("ignore", category=NotOpenSSLWarning)
-warnings.filterwarnings("ignore", message=".*urllib3 v2 only supports OpenSSL.*")
-
 import sys
 
 try:
