@@ -8,12 +8,6 @@
 [![Last Commit](https://img.shields.io/github/last-commit/labrack/biblestudy-cli)](https://github.com/labrack/biblestudy-cli/commits/main)
 
 
-
-[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue?style=flat-square)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/github/license/labrack/biblestudy-cli?style=flat-square)](https://github.com/labrack/biblestudy-cli/blob/main/LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/labrack/biblestudy-cli?style=flat-square)](https://github.com/labrack/biblestudy-cli/commits/main)
-
-
 BibleStudy CLI — a text-based Bible study companion for your terminal!
 
 Powered by [api.bible](https://docs.api.bible/) and OpenAI. Concept inspired by [SimplyScripture](https://mysimplyscripture.com/).
