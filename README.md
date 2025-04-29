@@ -115,6 +115,16 @@ Use `.gitignore` provided to stay safe.
 
 ---
 
+## Special Notes for Mac Users
+
+- If you see a LibreSSL warning about urllib3 when running BibleStudy CLI, you can safely ignore it.
+- To suppress it completely, you can run the app with this command:
+
+  ```bash
+  python -W ignore::urllib3.exceptions.NotOpenSSLWarning main.py
+
+---
+
 ## Future Ideas for Version 1.1+
 
 - Add fuzzy matching for scripture snippets to improve detection.
