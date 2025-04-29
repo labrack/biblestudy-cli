@@ -1,9 +1,16 @@
 # biblestudy-cli
 
+[![GitHub Release](https://img.shields.io/github/v/release/labrack/biblestudy-cli?style=flat-square)](https://github.com/labrack/biblestudy-cli/releases)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![OpenAI API](https://img.shields.io/badge/API-OpenAI-blue.svg)](https://openai.com/)
 [![Bible API](https://img.shields.io/badge/API-api.bible-blue.svg)](https://docs.api.bible/)
+
+
+[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue?style=flat-square)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/github/license/labrack/biblestudy-cli?style=flat-square)](https://github.com/labrack/biblestudy-cli/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/labrack/biblestudy-cli?style=flat-square)](https://github.com/labrack/biblestudy-cli/commits/main)
+
 
 BibleStudy CLI — a text-based Bible study companion for your terminal!
 
@@ -118,10 +125,6 @@ Use `.gitignore` provided to stay safe.
 ## Special Notes for Mac Users
 
 - If you see a LibreSSL warning about urllib3 when running BibleStudy CLI, you can safely ignore it.
-- To suppress it completely, you can run the app with this command:
-
-  ```bash
-  python -W ignore::urllib3.exceptions.NotOpenSSLWarning main.py
 
 ---
 
