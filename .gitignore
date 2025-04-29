@@ -4,6 +4,7 @@ notes/
 
 # Avoid publishing sensitive API keys and any local config
 config.py
+.env
 
 # Python common ignores
 __pycache__/
