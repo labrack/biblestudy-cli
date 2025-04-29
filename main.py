@@ -8,14 +8,9 @@ import sys
 
 try:
     from rich_ui import (
-        welcome_screen,
-        select_translation,
-        main_menu,
-        show_verse,
-        show_interpretation,
-        prompt_save,
-        goodbye_message,
-        error_message
+        print_main_banner,
+        print_result_banner,
+        print_menu_options
     )
     from cache_manager import get_cached_reference, add_to_cache
     from api_bible_client import fetch_verse_text
@@ -26,11 +21,47 @@ except Exception as e:
     print(f"Error: {e}")
     sys.exit(1)
 
+def select_translation():
+    print("\nWhich translation would you like to use?")
+    print("[1] FBV (Free Bible Version)")
+    print("[2] KJV (King James Version)")
+    print("[3] ASV (American Standard Version)")
+    print("[4] WEB (World English Bible)")
+
+    translation_options = {
+        "1": "FBV",
+        "2": "KJV",
+        "3": "ASV",
+        "4": "WEB"
+    }
+
+    choice = input("Enter the number for your translation [1/2/3/4]: ").strip()
+    return translation_options.get(choice, "WEB")
+
+def main_menu():
+    print_menu_options()
+    choice = input("\nChoose an option (0-8) [0/1/2/3/4/5/6/7/8]: ").strip()
+    return choice
+
+def show_verse(reference, verse_text):
+    print_result_banner(reference)
+    print(verse_text)
+
+def error_message(message):
+    print(f"\n❌ {message}\n")
+
+def goodbye_message():
+    print("\n👋 Goodbye! Thanks for using the Bible Study CLI!\n")
+
+def prompt_save():
+    save = input("\nWould you like to save this result? (y/n): ").strip().lower()
+    return save == "y"
+
 def main():
     try:
-        welcome_screen()
+        print_main_banner()
 
-        user_input = input(">> ").strip()
+        user_input = input("\nEnter a Bible reference (e.g., John 3:16) or a snippet of scripture.\n\n>> ").strip()
         translation = select_translation()
 
         reference = get_cached_reference(translation, user_input)
@@ -96,7 +127,8 @@ def main():
                     error_message(f"Error communicating with AI: {e}")
                     continue
 
-                show_interpretation(action_title, result)
+                print_result_banner(action_title)
+                print(result)
 
                 if prompt_save():
                     try:
