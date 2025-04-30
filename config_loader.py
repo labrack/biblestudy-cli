@@ -11,3 +11,6 @@ def get_openai_api_key():
 
 def get_notes_directory():
     return os.getenv("BIBLESTUDY_NOTES_DIRECTORY") or config.BIBLESTUDY_NOTES_DIRECTORY
+
+def get_nlt_api_key():
+    return os.getenv("NLT_API_KEY") or config.NLT_API_KEY
