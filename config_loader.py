@@ -14,3 +14,6 @@ def get_notes_directory():
 
 def get_nlt_api_key():
     return os.getenv("NLT_API_KEY") or config.NLT_API_KEY
+
+def get_esv_api_key():
+    return os.getenv("ESV_API_KEY") or config.ESV_API_KEY

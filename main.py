@@ -9,6 +9,7 @@ try:
     from cache_manager import get_cached_reference, add_to_cache
     from api_bible_client import fetch_verse_text
     from nlt_api_client import fetch_nlt_text
+    from esv_api_client import fetch_esv_text
     from openai_client import ask_openai
     from notes_manager import save_note
 except Exception as e:
@@ -19,20 +20,22 @@ except Exception as e:
 def select_translation():
     print("\nWhich translation would you like to use?")
     print("[1] NLT (New Living Translation)")
-    print("[2] FBV (Free Bible Version)")
-    print("[3] KJV (King James Version)")
-    print("[4] ASV (American Standard Version)")
-    print("[5] WEB (World English Bible)")
+    print("[2] ESV (English Standard Version)")
+    print("[3] FBV (Free Bible Version)")
+    print("[4] KJV (King James Version)")
+    print("[5] ASV (American Standard Version)")
+    print("[6] WEB (World English Bible)")
 
     translation_options = {
         "1": "NLT",
-        "2": "FBV",
-        "3": "KJV",
-        "4": "ASV",
-        "5": "WEB"
+        "2": "ESV",
+        "3": "FBV",
+        "4": "KJV",
+        "5": "ASV",
+        "6": "WEB"
     }
 
-    choice = input("Enter the number for your translation [1/2/3/4/5]: ").strip()
+    choice = input("Enter the number for your translation [1-6]: ").strip()
     return translation_options.get(choice, "NLT")
 
 def main_menu():
@@ -57,6 +60,8 @@ def prompt_save():
 def get_verse_text(reference, translation):
     if translation == "NLT":
         return fetch_nlt_text(reference)
+    elif translation == "ESV":
+        return fetch_esv_text(reference)
     else:
         return fetch_verse_text(reference, translation)
 

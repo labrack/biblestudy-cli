@@ -1,12 +1,14 @@
 # biblestudy-cli
 
 [![GitHub Release](https://img.shields.io/github/v/release/labrack/biblestudy-cli)](https://github.com/labrack/biblestudy-cli/releases)
-[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
-[![OpenAI API](https://img.shields.io/badge/API-OpenAI-blue.svg)](https://openai.com/)
-[![Bible API](https://img.shields.io/badge/API-api.bible-blue.svg)](https://docs.api.bible/)
-[![NLT API](https://img.shields.io/badge/API-api.nlt.to-green.svg)](https://api.nlt.to/)
-[![License: MIT](https://img.shields.io/github/license/labrack/biblestudy-cli)](https://github.com/labrack/biblestudy-cli/blob/main/LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/labrack/biblestudy-cli)](https://github.com/labrack/biblestudy-cli/commits/main)
+[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/github/license/labrack/biblestudy-cli)](https://github.com/labrack/biblestudy-cli/blob/main/LICENSE)
+
+[![OpenAI API](https://img.shields.io/badge/API-OpenAI-lightblue.svg)](https://openai.com/)
+[![Bible API](https://img.shields.io/badge/API-api.bible-lightblue.svg)](https://docs.api.bible/)
+[![NLT API](https://img.shields.io/badge/API-api.nlt.to-lightblue.svg)](https://api.nlt.to/)
+[![ESV API](https://img.shields.io/badge/API-api.esv.org-lightblue.svg)](https://api.esv.org/)
 
 BibleStudy CLI — a text-based Bible study companion for your terminal.
 
@@ -22,6 +24,7 @@ Inspired by [SimplyScripture](https://mysimplyscripture.com/).
 - Input or detect Bible references (e.g., `John 3:16`)
 - Choose from the following translations:
   - ✅ NLT (New Living Translation) — via `api.nlt.to`
+  - ✅ ESV (English Standard Version) — via `api.esv.org`
   - ✅ FBV (Free Bible Version)
   - ✅ KJV (King James Version)
   - ✅ ASV (American Standard Version)
@@ -56,12 +59,14 @@ You'll need:
 - **OpenAI API key** ([Get one here](https://platform.openai.com/account/api-keys))
 - **api.bible key** ([Sign up here](https://docs.api.bible/))
 - **NLT API key** ([Request access here](https://api.nlt.to/))
+- **ESV API key** (Request access here](https://api.esv.org))
 
 Set environment variables:
 
 export OPENAI_API_KEY=your-openai-key
 export BIBLE_API_KEY=your-api-bible-key
 export NLT_API_KEY=your-nlt-api-key
+export ESV_API_KEY=your-esv-api-key
 export BIBLESTUDY_NOTES_DIRECTORY=./notes  # optional override
 
 Or use `config.py` locally (not recommended for production).
@@ -84,6 +89,7 @@ Enter a Bible reference (e.g., John 3:16) or a snippet of scripture.
 
 Which translation would you like to use?
 [1] NLT (New Living Translation)
+[2] ESV (English Standard Version)
 [2] FBV (Free Bible Version)
 [3] KJV (King James Version)
 [4] ASV (American Standard Version)
