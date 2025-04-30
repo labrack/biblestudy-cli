@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.1] – 2025-04-30
+
+### 🐛 Bugfixes
+
+- 🌐 Fixed URL encoding for NLT references containing spaces (e.g., `1 Corinthians`, `3 John`)
+- 🧼 Removed extra content from NLT output:
+  - Section and chapter headers (e.g., "Greetings", "Caring for the Lord’s Workers")
+  - Footnotes and superscript anchors
+- ✅ Now properly handles short/red-letter-free books like *3 John*
+- 🔢 Ensures accurate verse numbering and clean, readable formatting
+
+---
+
 ## [1.2.0] – 2025-04-30
 
 ### ✨ New Features
