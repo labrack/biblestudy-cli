@@ -12,7 +12,7 @@
 
 BibleStudy CLI — a text-based Bible study companion for your terminal.
 
-Powered by [api.bible](https://docs.api.bible/), [api.nlt.to](https://api.nlt.to), and OpenAI.  
+Powered by [api.bible](https://docs.api.bible/), [api.nlt.to](https://api.nlt.to), [api.esv.org](https://api.esv.org), and OpenAI.  
 Inspired by [SimplyScripture](https://mysimplyscripture.com/).
 
 > **Note:** Neither I nor this tool are affiliated with SimplyScripture — I just like their concept and wanted a CLI version.
