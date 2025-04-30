@@ -9,7 +9,7 @@ BASE_URL = "https://api.nlt.to/api/passages"
 def fetch_nlt_text(reference: str) -> str:
     """
     Fetch clean NLT passage text from api.nlt.to,
-    preserving verse numbers and stripping footnotes.
+    preserving verse numbers and removing footnotes, anchors, and headers.
     """
     api_key = get_nlt_api_key()
 
@@ -17,7 +17,7 @@ def fetch_nlt_text(reference: str) -> str:
         raise Exception("❌ NLT API key is missing. Set NLT_API_KEY in your environment or config.py.")
 
     params = {
-        "ref": reference.replace(" ", ".").replace(":", "."),
+        "ref": reference,
         "key": api_key
     }
 
@@ -33,21 +33,24 @@ def fetch_nlt_text(reference: str) -> str:
 
     all_verses = []
 
-    # Each verse is inside a <verse_export> tag
     for verse_tag in soup.select("verse_export"):
-        # Remove footnote anchors and tooltips
-        for tag in verse_tag.select("a, .tn"):
+        # Remove footnotes, anchors, and headers
+        for tag in verse_tag.select(".tn, a, h2, h3"):
             tag.decompose()
 
         # Extract verse number
         verse_num = verse_tag.select_one(".vn")
-        verse_num_text = verse_num.get_text(strip=True) if verse_num else ""
+        verse_num_text = verse_num.get_text(" ", strip=True) if verse_num else ""
 
-        # Extract verse content (red span)
-        red_text = verse_tag.select_one(".red")
-        verse_content = red_text.get_text(" ", strip=True) if red_text else ""
+        # Extract full verse content
+        verse_text = verse_tag.get_text(" ", strip=True)
 
-        full_line = f"[{verse_num_text}] {verse_content}" if verse_num_text else verse_content
-        all_verses.append(full_line)
+        # Strip duplicate number if it appears in the text
+        if verse_text.startswith(verse_num_text):
+            verse_text = verse_text[len(verse_num_text):].lstrip()
 
-    return "\n".join(all_verses)
+        full_line = f"[{verse_num_text}] {verse_text}" if verse_text else ""
+        if full_line.strip():
+            all_verses.append(full_line)
+
+    return "\n".join(all_verses).strip()
