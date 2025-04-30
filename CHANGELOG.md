@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.2.0] – 2025-04-30
+
+### ✨ New Features
+
+- 📖 Added support for the **ESV (English Standard Version)** via [api.esv.org](https://api.esv.org/)
+- 🔐 Secure API key integration using `Authorization: Token ...` header
+- 🔄 ESV available as option [2] in the translation menu
+- 📜 ESV results include properly formatted verse numbers (e.g., `[16]`, `[17]`) for multi-verse passages
+
+### 🧰 Internal Improvements
+
+- Refactored `main.py` to route ESV lookups cleanly through `fetch_esv_text()`
+- Added `get_esv_api_key()` in `config_loader.py` for safe fallback loading
+- Updated `.env.example` and `config.py.sample` to include `ESV_API_KEY`
+
+---
+
 ## [1.1.0] – 2025-04-28
 
 ### ✨ New Features
