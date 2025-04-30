@@ -75,7 +75,7 @@ python main.py
 ---
 
 ## 💬 Sample Run
-
+```
 📖 Welcome to the Bible Study CLI 📖
 
 Enter a Bible reference (e.g., John 3:16) or a snippet of scripture.
@@ -109,7 +109,7 @@ What would you like to do?
 [7] 🔄 Change Translation for Current Reference
 [8] ➕ Enter a New Bible Reference
 [0] 🚪 Exit
-
+```
 ---
 
 ## 💾 Saving Notes
