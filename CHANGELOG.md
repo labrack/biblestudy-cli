@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.3.0] - 2025-05-01
+
+### Added
+- 📅 New "Verse of the Day" feature!
+  - User is prompted on startup to view a daily verse
+  - Option 9 in the action menu lets you re-view the daily verse at any time
+- 📚 Introduced `daily_verses.json`: 366 hand-picked references used across devotionals
+- 🔁 New action menu flow for switching verses or translations without restarting the app
+
+### Changed
+- 🧼 Refactored `main.py` to improve structure, remove redundancy, and better separate logic
+- ✂️ Removed old experimental OpenAI-powered verse suggestion logic
+
+### Fixed
+- 🐛 NLT client now correctly parses references with numeric book names (e.g., "1 Corinthians")
+- 🧼 Stripped unwanted section headers and fixed empty line bugs in NLT output
+
+---
+
 ## [1.2.1] – 2025-04-30
 
 ### 🐛 Bugfixes
