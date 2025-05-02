@@ -23,6 +23,7 @@ def print_menu_options():
         "[6] 🛠️ Life Application",
         "[7] 🔄 Change Translation for Current Reference",
         "[8] ➕ Enter a New Bible Reference",
+        "[9] 📅 Get the Verse of the Day",
         "[0] 🚪 Exit"
     ]
 
