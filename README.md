@@ -36,6 +36,7 @@ Inspired by [SimplyScripture](https://mysimplyscripture.com/).
   - 🔗 Cross-reference other scriptures
   - 🔍 Highlight key terms
   - 🛠️ Apply to daily life
+- 📅 Verse of the Day support (automatically shown on launch or via Option 9)
 - Save study notes automatically
 - Works in any terminal — beautiful output powered by `rich`
 
@@ -48,7 +49,9 @@ Inspired by [SimplyScripture](https://mysimplyscripture.com/).
 
 Install dependencies:
 
+```bash
 pip install -r requirements.txt
+```
 
 ---
 
@@ -59,15 +62,17 @@ You'll need:
 - **OpenAI API key** ([Get one here](https://platform.openai.com/account/api-keys))
 - **api.bible key** ([Sign up here](https://docs.api.bible/))
 - **NLT API key** ([Request access here](https://api.nlt.to/))
-- **ESV API key** (Request access here](https://api.esv.org))
+- **ESV API key** ([Request access here](https://api.esv.org))
 
 Set environment variables:
 
+```bash
 export OPENAI_API_KEY=your-openai-key
 export BIBLE_API_KEY=your-api-bible-key
 export NLT_API_KEY=your-nlt-api-key
 export ESV_API_KEY=your-esv-api-key
 export BIBLESTUDY_NOTES_DIRECTORY=./notes  # optional override
+```
 
 Or use `config.py` locally (not recommended for production).
 
@@ -75,12 +80,15 @@ Or use `config.py` locally (not recommended for production).
 
 ## ▶️ Running the App
 
+```bash
 python main.py
+```
 
 ---
 
 ## 💬 Sample Run
-```
+
+```bash
 📖 Welcome to the Bible Study CLI 📖
 
 Enter a Bible reference (e.g., John 3:16) or a snippet of scripture.
@@ -90,12 +98,12 @@ Enter a Bible reference (e.g., John 3:16) or a snippet of scripture.
 Which translation would you like to use?
 [1] NLT (New Living Translation)
 [2] ESV (English Standard Version)
-[2] FBV (Free Bible Version)
-[3] KJV (King James Version)
-[4] ASV (American Standard Version)
-[5] WEB (World English Bible)
+[3] FBV (Free Bible Version)
+[4] KJV (King James Version)
+[5] ASV (American Standard Version)
+[6] WEB (World English Bible)
 
-Enter the number for your translation [1/2/3/4/5]: 1
+Enter the number for your translation [1-6]: 1
 
 Fetching NLT passage: John 3:16... done.
 
@@ -114,8 +122,10 @@ What would you like to do?
 [6] 🛠️ Life Application
 [7] 🔄 Change Translation for Current Reference
 [8] ➕ Enter a New Bible Reference
+[9] 📅 Show the Verse of the Day
 [0] 🚪 Exit
 ```
+
 ---
 
 ## 💾 Saving Notes
@@ -137,18 +147,19 @@ You can change the location with the `BIBLESTUDY_NOTES_DIRECTORY` environment va
 
 If you see a warning like this:
 
+```
 NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently using LibreSSL
+```
 
 ✅ You can safely ignore it, or pin `urllib3<2` in your requirements to avoid it.
 
 ---
 
-## 🔮 Future Ideas for Version 1.2+
+## 🔮 Future Ideas
 
 - Add fuzzy search for snippets (e.g. "love is patient")
 - Support full chapter navigation
 - Offline caching for entire books
-- Daily verse feature
 - Save notes in Markdown format
 - Session resume after crash
 - UI upgrade using `textual` or `urwid`
