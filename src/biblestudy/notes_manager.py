@@ -2,7 +2,7 @@
 
 import os
 from datetime import datetime
-from config_loader import get_notes_directory
+from .config_loader import get_notes_directory
 
 NOTES_DIR = get_notes_directory()
 

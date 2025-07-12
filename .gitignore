@@ -17,3 +17,17 @@ env/
 .vscode/
 *.log
 .DS_Store
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+.tox/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# setuptools
+MANIFEST

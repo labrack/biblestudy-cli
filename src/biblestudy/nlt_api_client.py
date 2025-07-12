@@ -2,7 +2,7 @@
 
 import requests
 from bs4 import BeautifulSoup
-from config_loader import get_nlt_api_key
+from .config_loader import get_nlt_api_key
 
 BASE_URL = "https://api.nlt.to/api/passages"
 

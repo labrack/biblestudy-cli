@@ -1,18 +1,18 @@
 import sys
 
 try:
-    from rich_ui import (
+    from .rich_ui import (
         print_main_banner,
         print_result_banner,
         print_menu_options
     )
-    from cache_manager import get_cached_reference, add_to_cache
-    from api_bible_client import fetch_verse_text
-    from nlt_api_client import fetch_nlt_text
-    from esv_api_client import fetch_esv_text
-    from openai_client import ask_openai
-    from notes_manager import save_note
-    from daily_verse_loader import get_today_verse_reference
+    from .cache_manager import get_cached_reference, add_to_cache
+    from .api_bible_client import fetch_verse_text
+    from .nlt_api_client import fetch_nlt_text
+    from .esv_api_client import fetch_esv_text
+    from .openai_client import ask_openai
+    from .notes_manager import save_note
+    from .daily_verse_loader import get_today_verse_reference
 except Exception as e:
     print("\u274c Exception caught during imports!")
     print(f"Error: {e}")

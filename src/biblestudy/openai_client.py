@@ -1,7 +1,7 @@
 # openai_client.py
 
 from openai import OpenAI
-from config_loader import get_openai_api_key
+from .config_loader import get_openai_api_key
 
 client = OpenAI(api_key=get_openai_api_key())
 
