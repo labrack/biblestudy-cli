@@ -1,7 +1,7 @@
 # esv_api_client.py
 
 import requests
-from config_loader import get_esv_api_key
+from .config_loader import get_esv_api_key
 
 BASE_URL = "https://api.esv.org/v3/passage/text/"
 

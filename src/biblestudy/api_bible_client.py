@@ -1,5 +1,5 @@
 import requests
-from config_loader import get_bible_api_key
+from .config_loader import get_bible_api_key
 
 BASE_URL = "https://api.scripture.api.bible/v1/bibles"
 
