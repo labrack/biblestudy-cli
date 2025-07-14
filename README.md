@@ -44,54 +44,6 @@ Inspired by [SimplyScripture](https://mysimplyscripture.com/).
 
 ## 🚀 Quickstart
 
-### Install Locally
-
-To install the package locally for development or testing:
-
-```bash
-# Clone the repository (if you haven't already)
-git clone https://github.com/labrack/biblestudy-cli.git
-cd biblestudy-cli
-
-# Install the package in development mode
-pip install .
-```
-
-### Run the CLI
-
-Once installed, you can run the Bible study CLI from anywhere:
-
-```bash
-# Run the CLI using the installed command
-biblestudy
-```
-
-This is equivalent to the old way of running `python main.py`, but now the `biblestudy` command is available system-wide after installation.
-
-### Install from PyPI (Coming Soon)
-
-Once published to PyPI, you'll be able to install directly:
-
-```bash
-pip install biblestudy
-biblestudy
-```
-
----
-
-## 🚀 Requirements
-
-- Python 3.9+
-- `requests`, `openai`, `rich`, `beautifulsoup4`
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
 ## 🔐 API Keys Setup
 
 You'll need:
@@ -113,12 +65,51 @@ export BIBLESTUDY_NOTES_DIRECTORY=./notes  # optional override
 
 Or use `config.py` locally (not recommended for production).
 
+
+### Install from PyPI
+
+This package is published to PyPI, so you can install using pip directly:
+
+```bash
+pip install biblestudy
+biblestudy
+```
+### ...OR Install Locally
+
+To install the package locally for development or testing:
+
+```bash
+# Clone the repository (if you haven't already)
+git clone https://github.com/labrack/biblestudy-cli.git
+cd biblestudy-cli
+
+# Install the package in development mode
+pip install .
+```
+This is equivalent to the old way of running `python main.py`, but now the `biblestudy` command is available system-wide after installation.
+
+---
+
+## 🚀 Requirements
+
+- Python 3.9+
+- `requests`, `openai`, `rich`, `beautifulsoup4`
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
 ---
 
 ## ▶️ Running the App
 
+Once installed, you can run the Bible study CLI from anywhere:
+
 ```bash
-python main.py
+# Run the CLI using the installed command
+biblestudy
 ```
 
 ---
