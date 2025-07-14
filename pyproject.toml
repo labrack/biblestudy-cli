@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "biblestudy"
-version = "1.4.0"
+version = "1.4.1"
 description = "A text-based Bible study companion for your terminal"
 readme = "README.md"
 license = {text = "MIT"}
