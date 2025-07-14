@@ -4,7 +4,7 @@ BibleStudy CLI - A text-based Bible study companion for your terminal.
 Powered by api.bible, api.nlt.to, api.esv.org, and OpenAI.
 """
 
-__version__ = "1.0.0"
+__version__ = "1.4.1"
 __author__ = "labrack"
 __description__ = "A text-based Bible study companion for your terminal"
 
